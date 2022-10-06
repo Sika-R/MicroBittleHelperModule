@@ -18,7 +18,7 @@ def parse_accelerometer():
         deg = deg / Math.PI * 180
         if y > 0:
             deg = 360 - deg
-        print(deg)
+        # print(deg)
         inner = []
         outer = []
         if deg < 45 or deg > 315:
@@ -51,7 +51,10 @@ def parse_accelerometer():
     led.plot(2, 2)
     return direction
 
-while True:
-    parse_accelerometer()
-    basic.pause(100)
-    basic.clear_screen()
+def parse_slider():
+    reading = pins.analog_read_pin(AnalogPin.P0)
+    return reading
+
+def parse_humid_sensor():
+    reading = pins.analog_read_pin(AnalogPin.P1)
+    return reading

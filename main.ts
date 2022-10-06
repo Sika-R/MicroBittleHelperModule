@@ -85,7 +85,7 @@ function parse_accelerometer(): number {
             deg = 360 - deg
         }
         
-        console.log(deg)
+        //  print(deg)
         inner = []
         outer = []
         if (deg < 45 || deg > 315) {
@@ -125,8 +125,13 @@ function parse_accelerometer(): number {
     return direction
 }
 
-while (true) {
-    parse_accelerometer()
-    basic.pause(100)
-    basic.clearScreen()
+function parse_slider(): number {
+    let reading = pins.analogReadPin(AnalogPin.P0)
+    return reading
 }
+
+function parse_humid_sensor(): number {
+    let reading = pins.analogReadPin(AnalogPin.P1)
+    return reading
+}
+
