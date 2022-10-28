@@ -125,13 +125,18 @@ function parse_accelerometer(): number {
     return direction
 }
 
-function parse_slider(): number {
+function parse_P0(): number {
     let reading = pins.analogReadPin(AnalogPin.P0)
     return reading
 }
 
-function parse_humid_sensor(): number {
+function parse_P1(): number {
     let reading = pins.analogReadPin(AnalogPin.P1)
+    return reading
+}
+
+function parse_P2(): number {
+    let reading = pins.analogReadPin(AnalogPin.P2)
     return reading
 }
 

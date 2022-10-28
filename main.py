@@ -51,10 +51,14 @@ def parse_accelerometer():
     led.plot(2, 2)
     return direction
 
-def parse_slider():
+def parse_P0():
     reading = pins.analog_read_pin(AnalogPin.P0)
     return reading
 
-def parse_humid_sensor():
+def parse_P1():
     reading = pins.analog_read_pin(AnalogPin.P1)
+    return reading
+
+def parse_P2():
+    reading = pins.analog_read_pin(AnalogPin.P2)
     return reading
